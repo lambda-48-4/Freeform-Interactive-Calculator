@@ -32,7 +32,7 @@ class Header extends Component {
         </div>
         <div className="logo">
         </div>
-        <ul class="header-links">
+        <ul className="header-links">
           <li>
             login
           </li>

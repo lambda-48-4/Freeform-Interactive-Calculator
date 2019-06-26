@@ -1,6 +1,6 @@
 import React, { Fragment, Component }from 'react';
-import SignUp from './SignUp';
-import SignIn from './SignIn';
+import SignUp  from './SignUp';
+import SignIn  from './SignIn';
 
 
  class UserAuthComponent extends Component{
@@ -27,8 +27,8 @@ import SignIn from './SignIn';
             <Fragment>
                 <section className="form-container">
                     <nav>
-                        <div onClick={ this.handlesignInOnClick } className={this.state.login && "active"}>Login</div>
-                        <div onClick={ this.handlesignUpOnClick } className={this.state.register && "active"}>SignUp</div>
+                        <div onClick={ this.handlesignInOnClick } className={this.state.login ? "active" : ""}>Login</div>
+                        <div onClick={ this.handlesignUpOnClick } className={this.state.register ? "active" : ""}>SignUp</div>
                     </nav>
                     <div className="userform">
                         {(this.state.register && <SignUp />) || <SignIn />}
