@@ -1,33 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .App {
+  height: 100%;
+  color: rgba(189, 189, 192, 1);
+}
+input,
+button {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1em;
+  margin: 0;
+  text-decoration: none;
+  height: 45px;
+  text-align: left;
+  border: 2px solid #0facf3;
+  border-radius: 4px;
+  padding: 10px;
+  background: transparent;
+  outline: none;
+}
+.input-label {
+  color: #f8f2f2;
+  margin-bottom: 5px;
+}
+.container {
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./assets/img/landingbackground.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  height: 100vh;
+}
+.form-input {
+  display: block;
+  margin-bottom: 12px;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.form-container {
+  width: 30%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 2;
+  border: 2px solid #eceaea;
+  border-radius: 4px;
+  top: 10%;
+  left: 66%;
+  box-shadow: 0 0 4px #ffffffee;
+}
+button.btn {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  background: #022f46;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #c4bfbf;
+  margin-bottom: 10px;
+  background: #070707;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container > nav > div {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img.landing-background {
+  filter: blur(2px);
 }
+.userform {
+  padding: 10px;
+}
+
+div.active {
+  border-bottom: 3px solid #e77111;
+}
+
+/* header nav */
+.navbar {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background: #021e38;
+  height: auto;
+  font-size: 14px;
+  font-weight: bold;
+}
+.burger > div{
+  cursor: pointer;
+  padding: 10px 10px;
+  width: 40px;
+}
+.burger span {
+  display: block;
+  background: #fff;
+  margin: 3px 0;
+  width: 30px;
+  height: 5px; 
+}
+.navbar ul li {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+}
+
+
+@media screen and (min-width: 576px) {
+  .navbar {
+    position: relative;
+    height: 50px;
+    z-index: 101;
+  }
+  .navbar ul{
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    padding: 15px 10px;
+  }
+  
+}
+
